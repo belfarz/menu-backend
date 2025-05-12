@@ -6,7 +6,6 @@ const Order = require("../models/orders")
 const Store = require("../models/store")
 
 mongoose.set('strictQuery',false);
-const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
@@ -17,7 +16,7 @@ if (process.env.NODE_ENV !== "production" ) {
 } 
 
 const CONNECTION = process.env.CONNECTION;
-
+const PORT = process.env.PORT;
 
 app.post('/orders', async (req, res) => {
    try {
