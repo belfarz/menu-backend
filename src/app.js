@@ -6,7 +6,7 @@ const Order = require("../models/orders")
 const Store = require("../models/store")
 
 mongoose.set('strictQuery',false);
-const PORT = 3122
+const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
